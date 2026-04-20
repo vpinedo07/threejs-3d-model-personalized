@@ -20,8 +20,8 @@ const actions = {};
 const sceneContainer = document.getElementById("scene-container");
 const currentAnimationLabel = document.getElementById("currentAnimation");
 
-const MODEL_PATH = ".././assets/models/fbx/Character.fbx";
-const ANIMS_PATH = "../.assets/models/fbx/";
+const MODEL_PATH = "../assets/models/fbx/Character.fbx";
+const ANIMS_PATH = "../assets/models/fbx/";
 
 init();
 loadCharacter();
