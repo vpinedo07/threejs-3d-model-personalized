@@ -1,0 +1,126 @@
+:root {
+  --bg-1: #0b1020;
+  --bg-2: #111a33;
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #eaf2ff;
+  --muted: #b9c5de;
+  --accent: #55c2ff;
+  --accent-2: #8f7dff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(85, 194, 255, 0.20), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(143, 125, 255, 0.18), transparent 22%),
+    linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.glass-nav {
+  background: rgba(5, 10, 25, 0.55);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.main-wrapper {
+  padding-top: 76px;
+}
+
+.side-panel {
+  min-height: calc(100vh - 76px);
+  background: rgba(255, 255, 255, 0.03);
+  border-right: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.glass-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 18px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.22);
+}
+
+.controls-list .list-group-item {
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.viewer-wrapper {
+  position: relative;
+  min-height: calc(100vh - 76px);
+}
+
+#scene-container {
+  width: 100%;
+  height: calc(100vh - 76px);
+}
+
+.overlay-info {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.pill {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
+}
+
+.footer-section {
+  padding: 18px 0;
+  background: rgba(5, 10, 25, 0.75);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.badge {
+  min-width: 26px;
+}
+
+canvas {
+  display: block;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  .side-panel {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #scene-container {
+    height: 70vh;
+  }
+
+  .viewer-wrapper {
+    min-height: auto;
+  }
+}

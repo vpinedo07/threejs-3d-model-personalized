@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <title>Modelo Mixamo con 5 movimientos - Three.js</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.179.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark glass-nav fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          Mixamo + Three.js
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Alternar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#controles">Controles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#programador">Programador</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero / contenido -->
+    <main class="main-wrapper">
+      <section class="container-fluid px-0">
+        <div class="row g-0">
+          <!-- Panel lateral -->
+          <div class="col-lg-3">
+            <div class="side-panel p-4" id="controles">
+              <h1 class="h3 fw-bold mb-3">Control de movimientos</h1>
+              <p class="mb-4">
+                Cambia la animación del personaje con el teclado.
+              </p>
+
+              <div class="card glass-card mb-3">
+                <div class="card-body">
+                  <h2 class="h5 fw-bold mb-3">Teclas</h2>
+                  <ul class="list-group list-group-flush controls-list">
+                    <li class="list-group-item">
+                      <span class="badge text-bg-primary">1</span> Taunt
+                    </li>
+                    <li class="list-group-item">
+                      <span class="badge text-bg-primary">2</span> Jumping Down
+                    </li>
+                    <li class="list-group-item">
+                      <span class="badge text-bg-primary">3</span> Silly Dancing
+                    </li>
+                    <li class="list-group-item">
+                      <span class="badge text-bg-primary">4</span> Jump Push Up
+                    </li>
+                    <li class="list-group-item">
+                      <span class="badge text-bg-primary">5</span> Drunk Walk
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="card glass-card mb-3">
+                <div class="card-body">
+                  <h2 class="h5 fw-bold mb-3">Animación actual</h2>
+                  <p id="currentAnimation" class="mb-0 fs-5 fw-semibold text-info">
+                    Cargando...
+                  </p>
+                </div>
+              </div>
+
+              <div class="card glass-card">
+                <div class="card-body">
+                  <h2 class="h5 fw-bold mb-3">Consejo</h2>
+                  <p class="mb-0">
+                    Usa el mouse para rotar la cámara y la rueda para hacer zoom.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="col-lg-9">
+            <div class="viewer-wrapper">
+              <div id="scene-container"></div>
+
+              <div class="overlay-info">
+                <span class="pill">Three.js</span>
+                <span class="pill">FBXLoader</span>
+                <span class="pill">Mixamo</span>
+                <span class="pill">Transiciones suaves</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section" id="programador">
+      <div class="container text-center">
+        <p class="mb-1 fw-bold">Programador: Víctor Pinedo</p>
+        <p class="mb-0">Proyecto Web con Three.js, Bootstrap y modelos de Mixamo</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
